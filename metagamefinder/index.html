@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MetaGameFinder · 주성현</title>
+<meta name="description" content="IGDB 게임 데이터와 AI 자연어 검색으로 취향에 맞는 게임을 찾는 게임 정보 웹 서비스">
+<meta property="og:title" content="MetaGameFinder · 주성현">
+<meta property="og:description" content="IGDB 게임 데이터와 AI 자연어 검색으로 취향에 맞는 게임을 찾는 게임 정보 웹 서비스">
+<meta property="og:image" content="../assets/metagamefinder/01-home.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../site.css">
+</head>
+<body data-v="mgf">
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="logo" href="../index.html">주성현</a>
+    <nav class="views">
+      <a href="../index.html" data-v="home">소개</a>
+      <a href="../metagamefinder/index.html" data-v="mgf">MetaGameFinder</a>
+      <a href="../festacal/index.html" data-v="festacal">FestaCal</a>
+    </nav>
+    <a class="icon-btn gh" href="https://github.com/2022136020" target="_blank" rel="noopener" title="GitHub">GH</a>
+    <button class="icon-btn" id="theme" type="button" aria-label="화면 모드 전환"></button>
+  </div>
+</header>
+
+<div class="page">
+<section class="view on pv mgf" id="v-mgf">
+  <div class="p-head">
+    <div>
+      <span class="kind">게임 정보 웹 서비스</span>
+      <h1>MetaGameFinder</h1>
+      <p>IGDB 게임 데이터와 AI 자연어 검색으로 취향에 맞는 게임을 찾고, 찜하고, 리뷰로 기록하는 서비스</p>
+    </div>
+    <dl class="facts">
+      <div><dt>기간</dt><dd>2026.03 – 06 · 11월 리뉴얼</dd></div>
+      <div><dt>팀</dt><dd>2인 → 리뉴얼은 혼자</dd></div>
+      <div><dt>맡은 일</dt><dd>모델 · 로직 · DB · UI</dd></div>
+      <div><dt>코드</dt><dd>비공개 · 요청 시 공유</dd></div>
+    </dl>
+  </div>
+
+  <div class="split">
+    <div class="t viewer" data-shots='[
+      ["../assets/metagamefinder/01-home.png","홈. 인기 게임을 배경 배너로 보여 줍니다"],
+      ["../assets/metagamefinder/05-ai-search.png","AI 자연어 검색. AI가 이해한 조건을 태그로 보여 줍니다"],
+      ["../assets/metagamefinder/03-explore.png","게임 탐색. 정렬, 장르 필터, 그리드/리스트"],
+      ["../assets/metagamefinder/04-explore-genre.png","장르 필터 패널. 장르명도 언어별로 바뀝니다"],
+      ["../assets/metagamefinder/06-detail.png","게임 상세. 실제 게임 장면을 배경으로 사용"],
+      ["../assets/metagamefinder/07-detail-media.png","동영상 / 스크린샷 갤러리"],
+      ["../assets/metagamefinder/10-light-mode.png","라이트 모드"],
+      ["../assets/metagamefinder/08-support-faq.png","고객센터 FAQ"],
+      ["../assets/metagamefinder/09-login.png","로그인. 데모 계정 버튼"]]'>
+    </div>
+
+    <div class="t story">
+      <div class="tabs"></div>
+
+      <div class="panel" data-tab="개요">
+        <h3>왜 만들었나</h3>
+        <ul>
+          <li>게임 정보(평점, 장르, 플랫폼, 영상)가 여러 사이트에 흩어져 있어 비교가 번거로웠습니다.</li>
+          <li>"친구랑 가볍게 할 협동 게임"처럼 느낌으로 찾고 싶은데, 대부분 검색창은 제목만 받습니다.</li>
+          <li>해 보고 싶은 게임을 모아 두고, 해 본 게임에 짧게 평을 남길 곳이 필요했습니다.</li>
+        </ul>
+        <h3>내가 한 일</h3>
+        <p>1차(팀, 14주)에서는 모델과 검색·정렬 로직, DB, 화면 일부를 맡았습니다. 팀 프로젝트가 끝난 뒤 디자인이 아쉬워서 11월에 혼자 Figma 디자인을 다시 받아 전 화면을 갈아엎었고, 그 과정에서 번역과 날짜 표시 문제도 같이 고쳤습니다.</p>
+      </div>
+
+      <div class="panel" data-tab="기능">
+        <dl class="rows">
+          <dt>게임 탐색</dt><dd>평점·인기·최신순 정렬, 장르 필터, 그리드/리스트, 페이지 또는 무한 스크롤</dd>
+          <dt>AI 검색</dt><dd>문장을 장르·최소 평점·플랫폼·키워드로 해석해서 검색, 해석한 조건을 화면에 표시</dd>
+          <dt>게임 상세</dt><dd>배경 배너, 정보·동영상·리뷰 탭, 스크린샷·트레일러 갤러리</dd>
+          <dt>찜 · 리뷰</dt><dd>카드에서 바로 찜, 1~10점 평점과 한 줄 평</dd>
+          <dt>기록</dt><dd>최근 본 게임, 검색 기록, "관심없음" 관리</dd>
+          <dt>다국어</dt><dd>한·영·일·중·스페인·프랑스어 6개, 장르명과 게임 소개 번역</dd>
+          <dt>화면 모드</dt><dd>다크 / 라이트</dd>
+          <dt>고객센터</dt><dd>공지, FAQ, 1:1 문의</dd>
+          <dt>관리자</dt><dd>게임 CRUD, 사용자 관리, 검색 로그, IGDB 동기화</dd>
+        </dl>
+      </div>
+
+      <div class="panel" data-tab="기술·구조">
+        <dl class="rows">
+          <dt>Language</dt><dd>Java 21</dd>
+          <dt>Web</dt><dd>Jakarta Servlet 6, JSP 3, JSTL 3, Tomcat 10</dd>
+          <dt>Data</dt><dd>MariaDB 11 (HikariCP), IGDB API</dd>
+          <dt>AI</dt><dd>LangChain4j 0.36 + Groq (llama-3.1-8b-instant)</dd>
+          <dt>Security</dt><dd>jBCrypt</dd>
+          <dt>Front</dt><dd>JSP, CSS 디자인 토큰, 바닐라 JS</dd>
+          <dt>Build · Test</dt><dd>Maven, Playwright</dd>
+        </dl>
+        <h3>구조</h3>
+<div class="arch">[브라우저] ── HTML(JSP) / fetch(JSON)
+   ▼
+[Servlet 컨트롤러] ── LocaleFilter(언어)
+ ├ Home/Search ─▶ GameService ─▶ GameDAO ─▶ IGDB (+ 캐시)
+ ├ 자연어 검색 ─▶ Groq LLM (실패 시 규칙 기반)
+ ├ 번역 ─▶ Groq → MyMemory (Translation_Cache 저장)
+ └ 찜/리뷰/회원/문의 DAO ─▶ MariaDB</div>
+        <h3>AI 검색이 안 될 때</h3>
+        <p>LLM이 JSON으로 답하지 않거나 호출이 실패하면 키워드 규칙으로 다시 해석합니다. 그래서 AI 키가 없어도 검색 자체는 됩니다.</p>
+        <h3>인기순이 이상했던 것</h3>
+        <p>처음엔 popularity 값이 전부 0이라 모르는 게임이 인기작으로 떴습니다. IGDB PopScore, 조회수, 다운로드 수 순서로 정렬 기준을 바꿨습니다.</p>
+        <h3>리뉴얼하면서</h3>
+        <ul>
+          <li>색과 여백을 CSS 변수로 묶어서 다크/라이트를 같은 변수로 전환</li>
+          <li>게임 카드를 JSP 태그 파일 하나(<code>gameCard.tag</code>)로 만들어 모든 화면에서 공유</li>
+          <li>Nielsen 휴리스틱 평가를 3번 돌려서 고칠 목록을 뽑음</li>
+        </ul>
+      </div>
+
+      <div class="panel" data-tab="문제 해결">
+        <details open><summary>한국어인데 게임 소개가 영어로 나옴<span class="who">리뉴얼</span></summary><div class="body">
+          <p><b>원인</b>Groq 키 만료(401), 대체 번역 API 하루 한도 초과(429), 번역 결과가 메모리에만 있어 재시작할 때마다 다시 번역하며 한도를 다 씀</p>
+          <p><b>해결</b>번역 결과를 <code>Translation_Cache</code> 테이블에 저장. 키 오류와 일시 오류를 나눠 재시도, 500자 제한에 맞춰 문장 단위로 쪼갬, 한도 초과 안내문이 번역문으로 저장되지 않게 막음. 목록 카드는 저장된 번역만 쓰고, 없으면 게임 정보로 만든 요약을 보여 줌</p>
+        </div></details>
+        <details><summary>날짜가 <code>Wed Mar 18 16:19:40 KST 2026</code>로 찍힘<span class="who">리뉴얼</span></summary><div class="body">
+          <p><b>원인</b>JSTL <code>fmt:formatDate</code>가 로케일을 못 찾으면 <code>toString()</code>으로 출력</p>
+          <p><b>해결</b><code>LocaleFilter</code>에서 요청마다 JSTL 로케일을 현재 언어로 지정</p>
+        </div></details>
+        <details><summary>상세 배너에 로고나 메뉴 화면이 나옴<span class="who">리뉴얼</span></summary><div class="body">
+          <p><b>원인</b>IGDB 아트워크는 로고 위주가 많고, 어떤 게임은 첫 스크린샷이 세이브 화면</p>
+          <p><b>해결</b>실제 게임 장면을 먼저 쓰고, 예외 게임은 <code>hero-image.properties</code>로 따로 지정</p>
+        </div></details>
+        <details><summary>디자인 바꿨는데 예전 화면이 보임<span class="who">리뉴얼</span></summary><div class="body">
+          <p><b>원인</b>브라우저 캐시</p>
+          <p><b>해결</b>CSS·JS 주소에 버전 쿼리(<code>?v=</code>)를 붙임</p>
+        </div></details>
+        <details><summary>홈 검색 결과가 안 나옴<span class="who">1차 팀</span></summary><div class="body">
+          <p><b>원인</b>IGDB 호출이 실패하면 대체 검색 결과를 돌지 않음</p>
+          <p><b>해결</b>이름 검색 경로를 정리하고 결과 처리 로직 수정</p>
+        </div></details>
+      </div>
+
+      <div class="panel" data-tab="회고">
+        <h3>아직 못 한 것</h3>
+        <ul>
+          <li>관리자 화면은 새 디자인과 다국어가 안 들어가 있습니다.</li>
+          <li>개인정보처리방침, 이용약관, 가입 동의 절차가 없습니다. 휴리스틱 평가에서도 1순위로 나왔습니다.</li>
+          <li>번역 품질과 속도는 여전히 외부 API 무료 한도에 묶여 있습니다.</li>
+        </ul>
+        <div class="note">처음엔 API가 잘 응답한다는 가정으로만 만들었는데, 키가 만료되거나 한도가 차는 일이 생각보다 자주 일어났습니다. 그래서 AI 검색이 안 되면 키워드 규칙으로 찾고, 번역이 안 되면 게임 정보로 만든 요약이라도 보여 주도록 바꿨습니다. 지금은 외부 API를 붙일 때 안 될 때 화면을 먼저 생각하는 편입니다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="next"><a href="../festacal/index.html">다음 · FestaCal →</a></div>
+</section>
+</div>
+
+<footer><span>© 2026 주성현</span><span>GitHub Pages</span></footer>
+
+<dialog id="lb"><img alt=""></dialog>
+<script src="../site.js"></script>
+</body>
+</html>

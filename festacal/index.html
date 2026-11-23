@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FestaCal · 주성현</title>
+<meta name="description" content="전국 축제·공연·전시를 한 곳에서 찾고 비 예보로 미리 챙기는 반응형 웹 서비스">
+<meta property="og:title" content="FestaCal · 주성현">
+<meta property="og:description" content="전국 축제·공연·전시를 한 곳에서 찾고 비 예보로 미리 챙기는 반응형 웹 서비스">
+<meta property="og:image" content="../assets/festacal/01-home.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../site.css">
+</head>
+<body data-v="festacal">
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="logo" href="../index.html">주성현</a>
+    <nav class="views">
+      <a href="../index.html" data-v="home">소개</a>
+      <a href="../metagamefinder/index.html" data-v="mgf">MetaGameFinder</a>
+      <a href="../festacal/index.html" data-v="festacal">FestaCal</a>
+    </nav>
+    <a class="icon-btn gh" href="https://github.com/2022136020" target="_blank" rel="noopener" title="GitHub">GH</a>
+    <button class="icon-btn" id="theme" type="button" aria-label="화면 모드 전환"></button>
+  </div>
+</header>
+
+<div class="page">
+<section class="view on pv fc" id="v-festacal">
+  <div class="p-head">
+    <div>
+      <span class="kind">캡스톤 디자인 · 팀장</span>
+      <h1>FestaCal<small>페스타콜</small></h1>
+      <p>전국 축제·공연·전시를 한 곳에서 찾고, 비 예보와 내 위치 기준 추천으로 놓치지 않게 챙기는 반응형 웹 서비스</p>
+    </div>
+    <dl class="facts">
+      <div><dt>기간</dt><dd>2026.09 – 10 · 11월 보완</dd></div>
+      <div><dt>팀</dt><dd>3인 (팀장)</dd></div>
+      <div><dt>맡은 일</dt><dd>기획 · 풀스택 · 문서</dd></div>
+      <div><dt>코드</dt><dd>비공개 · 요청 시 공유</dd></div>
+    </dl>
+  </div>
+
+  <div class="split">
+    <div class="t viewer" data-shots='[
+      ["../assets/festacal/01-home.png","홈. 날씨 위젯과 지역·카테고리 필터"],
+      ["../assets/festacal/02-map.png","지도 탐색. 카카오맵 클러스터, 거리순/관련도순"],
+      ["../assets/festacal/03-detail.png","축제 상세. 캘린더 담기, 위치 지도, 리뷰"],
+      ["../assets/festacal/05-mypage.png","마이페이지"],
+      ["../assets/festacal/04-mobile.png","모바일 홈"]]'>
+    </div>
+
+    <div class="t story">
+      <div class="tabs"></div>
+
+      <div class="panel" data-tab="개요">
+        <h3>왜 만들었나</h3>
+        <ul>
+          <li>축제 정보가 지자체, 기관마다 따로 있어서 한 번에 비교하기 어렵습니다.</li>
+          <li>야외 축제가 비 때문에 취소돼도 미리 알기 어려워 헛걸음하게 됩니다.</li>
+          <li>가고 싶은 축제를 날짜에 맞춰 챙겨 두기가 불편합니다.</li>
+        </ul>
+        <h3>그래서</h3>
+        <ul>
+          <li>TourAPI와 KCISA 공연·전시 정보를 모아 한 곳에서 검색</li>
+          <li>기상청 단기예보로 실외 행사에 비 소식이 있으면 경고하고 실내 행사를 추천</li>
+          <li>캘린더에 담으면 D-DAY와 진행 상태를 알아서 계산</li>
+        </ul>
+        <h3>내가 한 일</h3>
+        <p>팀장이라 기획서, 계획서, 스토리보드와 일정 관리를 맡았고 백엔드와 프론트 개발도 같이 했습니다. 수업이 끝난 뒤 11월에는 혼자 로그인 방식을 바꾸고 우천 경고를 다시 고쳤습니다.</p>
+      </div>
+
+      <div class="panel" data-tab="기능">
+        <dl class="rows">
+          <dt>검색 · 필터</dt><dd>지역·카테고리 복수 선택, 날짜 지정, 필터 초기화</dd>
+          <dt>지도</dt><dd>카카오맵, 내 위치 기준 거리순/관련도순, 카테고리별 마커 색</dd>
+          <dt>날씨</dt><dd>홈 날씨 위젯, 상세·캘린더 우천 경고, 실내 대체 추천</dd>
+          <dt>캘린더</dt><dd>축제 담기, D-DAY, 종료일 기준 진행 상태</dd>
+          <dt>계정</dt><dd>이메일 + 비밀번호, 30일 토큰, 회원 탈퇴</dd>
+          <dt>리뷰 · 알림</dt><dd>축제 리뷰, 알림, 건의사항</dd>
+          <dt>첫 방문 안내</dt><dd>홈·지도·상세 화면 가이드 투어</dd>
+          <dt>관리자</dt><dd>축제 정보 수정, 사용자 관리, API 데이터 동기화</dd>
+        </dl>
+      </div>
+
+      <div class="panel" data-tab="기술·구조">
+        <dl class="rows">
+          <dt>Frontend</dt><dd>React 19, Vite, React Router, axios</dd>
+          <dt>Backend</dt><dd>Java 21, Spring Boot 3, Spring Data JPA, BCrypt</dd>
+          <dt>Data</dt><dd>MySQL 8(개발), PostgreSQL(배포)</dd>
+          <dt>Open API</dt><dd>TourAPI, 기상청 단기예보, KCISA, 카카오맵</dd>
+          <dt>DevOps</dt><dd>Docker, Render (<code>render.yaml</code> 하나로 DB·백엔드·프론트 배포)</dd>
+          <dt>Test</dt><dd>JUnit 78개, ESLint 경고 0, Playwright 화면 점검</dd>
+        </dl>
+        <h3>구조</h3>
+<div class="arch">[React] ── REST + Bearer 토큰 ──▶ [Spring Boot]
+                                 ├ 축제 수집 ─▶ TourAPI · KCISA
+                                 ├ 날씨 ─────▶ 기상청 단기예보
+                                 ├ 인증 (BCrypt, 토큰은 해시로 저장)
+                                 └ JPA ─▶ MySQL / PostgreSQL</div>
+        <p>공공 API는 호출 제한이 있어서 <code>@Scheduled</code>로 주기적으로 받아 DB에 저장해 두고 씁니다.</p>
+        <h3>우천 경고 기준</h3>
+        <p>실외 축제이고, 행사 기간과 예보 범위(오늘~모레)가 겹치는 날 중 하루라도 강수확률이 60% 이상이면 경고합니다. 겹치는 날이 없으면 기상청을 아예 부르지 않습니다.</p>
+        <h3>로그인 바꾼 이유</h3>
+        <p>처음엔 이메일만으로 로그인돼서 탈퇴나 설정 변경을 누가 했는지 확인할 수 없었습니다. BCrypt 비밀번호와 30일 토큰으로 바꾸고, userId를 요청으로 받던 12곳을 전부 토큰으로 본인 확인하도록 고쳤습니다.</p>
+        <h3>그 밖에</h3>
+        <ul>
+          <li>늦게 온 예전 응답이 최신 결과를 덮어쓰지 않게 공용 훅(<code>useFetch</code>, <code>usePage</code>)으로 정리</li>
+          <li>Haversine 공식으로 내 위치와의 거리 계산</li>
+        </ul>
+      </div>
+
+      <div class="panel" data-tab="문제 해결">
+        <details open><summary>캘린더 우천 경고가 한 번도 안 뜸<span class="who">11월</span></summary><div class="body">
+          <p><b>원인</b>캘린더 응답이 우천 여부를 항상 false로 보내고 있었고, 판단도 시작일만 봐서 이미 진행 중인 축제는 경고가 안 뜸. 실외 축제는 대부분 몇 달씩 진행되는 거라 사실상 아무 데서도 안 뜨고 있었음</p>
+          <p><b>해결</b>행사 기간과 예보 범위가 겹치는지로 다시 짜고 테스트 6개 추가. 진행 중인 실외 축제 4건을 캘린더에 담아 보고, 기상청 API를 직접 조회해 실제로 비 예보(강수확률 60%)인지 맞춰 봄</p>
+        </div></details>
+        <details><summary>배포하니 우천 경고가 아예 동작 안 함</summary><div class="body">
+          <p><b>원인</b>이미 인코딩된 기상청 키를 <code>RestTemplate</code>이 한 번 더 인코딩해서 403</p>
+          <p><b>해결</b>완성된 <code>URI</code> 객체로 넘김</p>
+        </div></details>
+        <details><summary>내 PC에서만 <code>mvnw spring-boot:run</code> 실패<span class="who">11월</span></summary><div class="body">
+          <p><b>원인</b>플러그인이 클래스패스 파일을 UTF-8로 쓰는데 윈도우 Java는 MS949로 읽어서, 한글이 들어간 사용자 폴더 경로가 깨짐. 플러그인 코드를 직접 열어 보고 알아냄</p>
+          <p><b>해결</b>이 문제가 고쳐진 플러그인 버전(3.3.6)만 지정</p>
+        </div></details>
+        <details><summary>배포에서만 설정 저장, 알림 읽음이 안 됨</summary><div class="body">
+          <p><b>원인</b>CORS 허용 메서드에 <code>PATCH</code>가 빠져 있었음. 로컬은 Vite 프록시를 거쳐서 문제가 안 보였음</p>
+          <p><b>해결</b>추가하고 회귀 테스트 작성</p>
+        </div></details>
+        <details><summary>필터 추가했더니 서버가 안 뜸</summary><div class="body">
+          <p><b>원인</b>HQL <code>is empty</code>를 바인드 파라미터에 쓸 수 없음</p>
+          <p><b>해결</b>비어 있는지 여부를 서비스에서 미리 계산해서 boolean으로 넘김</p>
+        </div></details>
+        <details><summary>권한 확인이 빠진 API</summary><div class="body">
+          <p><b>원인</b>관리자 동기화 API에 권한 확인이 없었고, 관리자 계정을 만들 수 있는 안 쓰는 API가 열려 있었음</p>
+          <p><b>해결</b>권한 확인 추가, 안 쓰는 API 삭제, 이후 토큰 인증으로 통일</p>
+        </div></details>
+      </div>
+
+      <div class="panel" data-tab="회고">
+        <h3>아직 못 한 것</h3>
+        <ul>
+          <li>기상청 단기예보라 오늘~모레까지만 판단하고, 경고는 화면 배너라 푸시 알림은 아닙니다.</li>
+          <li>비밀번호 변경·찾기가 없습니다.</li>
+          <li>Render 무료 DB가 30일 뒤 만료돼서, 상시 데모를 하려면 DB를 다시 만들거나 유료로 바꿔야 합니다.</li>
+        </ul>
+        <div class="note">로컬에서는 잘 되다가 배포하면 안 되는 문제(CORS, 키 이중 인코딩)를 여러 번 겪었습니다. 우천 경고는 화면만 있고 실제로는 한 번도 안 뜨고 있었는데 한참 뒤에야 알았습니다. 그 뒤로는 고치고 나서 실제 데이터로 한 번 더 확인합니다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="next"><a href="../metagamefinder/index.html">← 이전 · MetaGameFinder</a></div>
+</section>
+</div>
+
+<footer><span>© 2026 주성현</span><span>GitHub Pages</span></footer>
+
+<dialog id="lb"><img alt=""></dialog>
+<script src="../site.js"></script>
+</body>
+</html>

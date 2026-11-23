@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>주성현 · Portfolio</title>
+<meta name="description" content="Java 백엔드 개발자 주성현의 포트폴리오. MetaGameFinder, FestaCal">
+<meta property="og:title" content="주성현 · Portfolio">
+<meta property="og:description" content="Java 백엔드 개발자 주성현의 포트폴리오. MetaGameFinder, FestaCal">
+<meta property="og:image" content="assets/metagamefinder/01-home.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body data-v="home">
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="logo" href="index.html">주성현</a>
+    <nav class="views">
+      <a href="index.html" data-v="home">소개</a>
+      <a href="metagamefinder/index.html" data-v="mgf">MetaGameFinder</a>
+      <a href="festacal/index.html" data-v="festacal">FestaCal</a>
+    </nav>
+    <a class="icon-btn gh" href="https://github.com/2022136020" target="_blank" rel="noopener" title="GitHub">GH</a>
+    <button class="icon-btn" id="theme" type="button" aria-label="화면 모드 전환"></button>
+  </div>
+</header>
+
+<div class="page">
+<section class="view on" id="v-home">
+  <div class="bento">
+    <div class="t s7 intro">
+      <p class="lbl">JAVA BACKEND · 신구대학교</p>
+      <h1>주성현</h1>
+      <p>Java로 웹 서비스를 만들고 있습니다. 주로 백엔드를 맡지만 화면도 직접 만듭니다. 아래 두 프로젝트는 모두 외부 API(IGDB, 공공데이터, 기상청 등)를 받아서 쓰는 서비스이고, 팀 프로젝트가 끝난 뒤에도 혼자 계속 고치고 있습니다.</p>
+      <div class="meta-row">
+        <a class="tagp" href="https://github.com/2022136020" target="_blank" rel="noopener">github.com/2022136020</a>
+        <span class="tagp">Spring Boot</span><span class="tagp">Servlet/JSP</span><span class="tagp">React</span>
+      </div>
+    </div>
+    <div class="t s5">
+      <p class="lbl">숫자로 보면</p>
+      <div class="stats">
+        <div class="stat"><b>2</b><span>끝까지 붙잡고 있는 서비스</span></div>
+        <div class="stat"><b>6</b><span>MetaGameFinder 지원 언어</span></div>
+        <div class="stat"><b>78</b><span>FestaCal 백엔드 테스트</span></div>
+        <div class="stat"><b>3</b><span>엮어 쓴 공공 API</span></div>
+      </div>
+    </div>
+
+    <a class="t s6 proj mgf" href="metagamefinder/index.html">
+      <div class="img"><img src="assets/metagamefinder/01-home.png" alt="MetaGameFinder 홈 화면"></div>
+      <div class="txt">
+        <span class="kind">게임 정보 · AI 검색</span>
+        <h2>MetaGameFinder</h2>
+        <p>원하는 느낌을 문장으로 쓰면 AI가 조건으로 바꿔 게임을 찾아 줍니다. 찜, 리뷰, 6개 언어 지원.</p>
+        <div class="foot"><span>2026.03 – 06 팀 · 11월 리뉴얼 개인</span><span class="go">보기 →</span></div>
+      </div>
+    </a>
+    <a class="t s6 proj fc" href="festacal/index.html">
+      <div class="img"><img src="assets/festacal/01-home.png" alt="FestaCal 홈 화면"></div>
+      <div class="txt">
+        <span class="kind">축제·공연·전시 · 날씨 연동</span>
+        <h2>FestaCal <small>페스타콜</small></h2>
+        <p>전국 축제를 한 곳에서 찾고, 비 예보가 있으면 캘린더에서 미리 알려 줍니다. 캡스톤 디자인 팀장.</p>
+        <div class="foot"><span>2026.09 – 10 팀 · 11월 보완</span><span class="go">보기 →</span></div>
+      </div>
+    </a>
+
+    <div class="t s4 dig">
+      <span class="from">MetaGameFinder</span>
+      <h3>번역 API 한도가 매일 바닥남</h3>
+      <p>번역 결과를 메모리에만 들고 있어서 서버를 껐다 켤 때마다 같은 글을 또 번역하고 있었습니다. DB에 저장하게 바꾸고 나서야 해결됐습니다.</p>
+    </div>
+    <div class="t s4 dig">
+      <span class="from">FestaCal</span>
+      <h3>있는 줄 알았던 우천 경고</h3>
+      <p>캘린더에 경고 배너 화면은 있었는데 서버가 값을 항상 false로 보내고 있었습니다. 고친 뒤 기상청 API를 직접 찔러 보고 진짜 비 예보인지까지 맞춰 봤습니다.</p>
+    </div>
+    <div class="t s4 dig">
+      <span class="from">FestaCal</span>
+      <h3>내 PC에서만 서버가 안 뜸</h3>
+      <p>사용자 폴더 이름이 한글이라 생긴 인코딩 문제였습니다. 원인 찾는 데 한참 걸렸고, 고친 건 플러그인 버전 한 줄이었습니다.</p>
+    </div>
+
+    <div class="t s12">
+      <p class="lbl">써 본 기술</p>
+      <div class="skills">
+        <div><h4>Backend</h4><ul><li>Java 21</li><li>Spring Boot 3 · JPA</li><li>Servlet / JSP</li><li>JUnit</li></ul></div>
+        <div><h4>Frontend</h4><ul><li>React 19 · Vite</li><li>JavaScript</li><li>HTML / CSS</li><li>반응형 · 다크 모드</li></ul></div>
+        <div><h4>Data</h4><ul><li>MariaDB</li><li>MySQL</li><li>PostgreSQL</li></ul></div>
+        <div><h4>AI · Open API</h4><ul><li>LangChain4j · Groq</li><li>IGDB</li><li>TourAPI · KCISA</li><li>기상청 · Kakao Map</li></ul></div>
+        <div><h4>Tools</h4><ul><li>Git · Maven</li><li>Docker · Render</li><li>Figma</li><li>Playwright</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<footer><span>© 2026 주성현</span><span>GitHub Pages</span></footer>
+
+<dialog id="lb"><img alt=""></dialog>
+<script src="site.js"></script>
+</body>
+</html>
